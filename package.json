@@ -1,0 +1,11 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/mainscss.scss:./css/grid.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

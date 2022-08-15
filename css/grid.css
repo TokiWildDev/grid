@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#containGrid {
+  z-index: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: 0.3fr 2fr 2fr 0.3fr;
+  grid-template-areas: "header header header header" "content content content aside" "content content content aside" "footer footer footer footer";
+}
+
+#header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo titre nav";
+  border-bottom: 1px solid black;
+}
+#header > div {
+  grid-area: logo;
+}
+#header > h1 {
+  grid-area: titre;
+  text-align: center;
+}
+#header > nav {
+  grid-area: nav;
+  border-left: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-spacing: 3rem;
+}
+#header > nav > ul {
+  list-style: none;
+}
+#header > nav > ul > li {
+  display: inline;
+}
+
+#content {
+  grid-area: content;
+}
+
+#aside {
+  grid-area: aside;
+  border-left: 1px solid black;
+}
+
+#footer {
+  grid-area: footer;
+  border-top: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  #containGrid {
+    z-index: 0;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 3fr 3fr 0.3fr;
+    grid-template-areas: "header" "content" "aside" "footer";
+  }
+  #aside {
+    border: 1px solid black;
+  }
+  #content {
+    border: 1px solid black;
+  }
+  #footer {
+    border: 1px solid black;
+  }
+}
+
+/*# sourceMappingURL=grid.css.map */
